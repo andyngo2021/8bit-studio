@@ -3,6 +3,7 @@ import time
 import tkinter as tk
 from tkinter import filedialog
 from ImageResize import ResizableImage
+# from helper_functions import *
 
 @eel.expose
 def closeApp():
@@ -16,20 +17,31 @@ def getFile():
     root.wm_attributes('-topmost', 1)
     f = filedialog.askopenfile()
     f = f.name
-    tmp = ResizableImage(f)
-    tmp.pixelate_image(0.07) 
+    pixelateImage(f, 1)
     # saved as FINAL.png in /target-images/
-    f = f.split('/')[6:]
-    f = "/".join(f)
+    # f = f.split('/')[6:]
+    # f = "/".join(f)
     print(f)
+    print("HELLO WORLD HI HI")
+    # return location of file
     return "target-images/FINAL.png"
 
 
 @eel.expose
 def acceptValFromJS(val):
-    print('got',val)
-    # possibly map functions for pixelation scheme
+    print("HIDJKSJFK")
+    pixelation_scale = 1/int(val)
+    loc = "C:/Users/andyn/Desktop/8bit-studio/web/target-images/FINAL.png"
+    pixelateImage(loc, pixelation_scale)
+    # inverse poggers
+
+def pixelateImage(location, value):
+    tmp = ResizableImage(location)
+    tmp.pixelate_image(value)
+
+
     
+
 
 
 # init the folder with all front end stuff

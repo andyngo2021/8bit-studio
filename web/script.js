@@ -43,6 +43,6 @@ function sendValToPy()
 {
     console.log("hi");
     eel.acceptValFromJS(val);
-    // document.getElementById("main-display").src = f;
+    document.getElementById("main-display").src = f;
     // return 5;
 }
