@@ -34,23 +34,6 @@ body{
     width: auto;
 }
 
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-} */
-
-/* .grid-container {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-}
-.grid-container .grid-child {
-    flex: 0 0 calc(25% - 1em);
-    min-height: 120px;
-    margin: 0.25em 0.5em;
-} */
 .flex-container {
     display: flex;
     width: 96%;
@@ -82,6 +65,9 @@ body{
     margin-right: 20px;
 } 
 
+button {
+    outline:none;
+}
 
 .btn-group button {
     border: 5px solid white; 
@@ -105,8 +91,8 @@ body{
     cursor: pointer;
     background-color:#b00055;
     width: 80%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin-bottom: 2%;
+    /* margin-top: 5%; */
 }
 
 .transparency-btn:hover {
@@ -145,20 +131,20 @@ label {
     width: auto;
     text-align: right;
     margin-right:10px;
-    /* font-family:'Courier New', Courier, monospace; */
     font-size:40;
 
 }
 
 input[type="text"], textarea 
 {
-    font-size:40;
+    font-size:35;
     /* background-color: #4a4a4a; */
     background-color:#93a4d9;
     color:white;
     font-family: 'Staatliches', cursive;
     border-radius: 15px 50px;
     text-align:center;
+    outline:none;
 }
 
 .scale-cb {
@@ -169,3 +155,29 @@ input[type=checkbox] {
     transform: scale(0.9);
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+.apply-changes-btn {
+    border: 5px solid white;
+    font-family: 'Staatliches', cursive;
+    font-size: 30;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color:#00c72e;
+    width: 80%;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+.apply-changes-btn:hover {
+    background-color:#09ed3e;
+}

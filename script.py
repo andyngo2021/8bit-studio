@@ -1,9 +1,8 @@
 import eel
-import time
 import tkinter as tk
 from tkinter import filedialog
 from ImageResize import ResizableImage
-# from helper_functions import *
+
 
 @eel.expose
 def closeApp():
@@ -51,7 +50,7 @@ def pixelateImage(location, value):
 
 # init the folder with all front end stuff
 eel.init('web')
-eel.start('index.html', size=(1000, 600))
+eel.start('index.html', size=(1000, 700))
 
 
 # val = eel.sendValToPy()

@@ -9,7 +9,7 @@
         <script src="script.js"></script>
 
     </head>
-    <body>
+    <body class="noselect">
         <!-- Top header -->
         <div><img draggable="false" class="center" src="assets/header.png"></div>
         <br>
@@ -35,7 +35,8 @@
             </form>
             
             <!-- <br> -->
-
+            <button class="apply-changes-btn">Apply Changes</button>
+            <br>
             <button class="transparency-btn">Make Image Transparent</button>
             <br>
             <div><p1><span id="pixelization"></span>Pixelize Image</p1>
@@ -51,7 +52,7 @@
             
             <p>Image Preview</p>
             <div class="img-box">
-                <img src="assets/logo.png" id="main-display">
+                <img draggable=false src="assets/logo.png" id="main-display">
             </div>
 
             <div class="btn-group">
