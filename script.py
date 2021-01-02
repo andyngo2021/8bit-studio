@@ -2,6 +2,7 @@ import eel
 import time
 import tkinter as tk
 from tkinter import filedialog
+from ImageResize import ResizableImage
 
 @eel.expose
 def closeApp():
@@ -13,8 +14,16 @@ def getFile():
     root = tk.Tk()
     root.withdraw()
     root.wm_attributes('-topmost', 1)
-    folder = filedialog.askopenfile()
-    print(folder.name)
+    f = filedialog.askopenfile()
+    f = f.name
+    tmp = ResizableImage(f)
+    tmp.pixelate_image(0.07) 
+    # saved as FINAL.png in /target-images/
+    f = f.split('/')[6:]
+    f = "/".join(f)
+    print(f)
+    return "target-images/FINAL.png"
+
 
 # init the folder with all front end stuff
 eel.init('web')

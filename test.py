@@ -8,10 +8,12 @@
 # print(f'Resizing with {w} x {h}')
 # z=z.resize((w,h))
 # z.save('FINAL.png')
-import os
+
 from ImageResize import ResizableImage
 import tkinter as tk
 from tkinter import filedialog
+# from tkinter.filedialog import asksaveasfile 
+# implement save folder later
 
 root = tk.Tk()
 root.withdraw()

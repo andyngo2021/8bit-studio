@@ -18,5 +18,12 @@ window.oncontextmenu = function(event) {
 
 function go()
 {
-    eel.getFile();
+    eel.getFile()(filename_resp);
+    
+}
+
+function filename_resp(filename)
+{
+    console.log(filename);
+    document.getElementById("main-display").src = filename;
 }
