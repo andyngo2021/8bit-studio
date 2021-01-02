@@ -1,9 +1,7 @@
 import eel
 import time
-import easygui
-
-
-
+import tkinter as tk
+from tkinter import filedialog
 
 @eel.expose
 def closeApp():
@@ -12,7 +10,11 @@ def closeApp():
 
 @eel.expose
 def getFile():
-    filename = easygui.fileopenbox()
+    root = tk.Tk()
+    root.withdraw()
+    root.wm_attributes('-topmost', 1)
+    folder = filedialog.askopenfile()
+    print(folder.name)
 
 # init the folder with all front end stuff
 eel.init('web')
