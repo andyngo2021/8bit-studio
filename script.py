@@ -25,9 +25,17 @@ def getFile():
     return "target-images/FINAL.png"
 
 
+@eel.expose
+def acceptValFromJS(val):
+    print('got',val)
+    # possibly map functions for pixelation scheme
+    
+
+
 # init the folder with all front end stuff
 eel.init('web')
 eel.start('index.html', size=(800, 600))
 
 
-
+# val = eel.sendValToPy()
+# print(val)

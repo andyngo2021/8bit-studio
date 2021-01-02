@@ -43,7 +43,7 @@ class ResizableImage:
         tmp.save(tmp_path)
         # Pixelating the image
         tmp_img = Image.open(tmp_path)
-        print(f'Resizing to these parameters: {self.original_w}x{self.original_w}')
+        print(f'Resizing to these parameters: {self.original_w}x{self.original_h}')
         tmp_img = tmp_img.resize((self.original_w, self.original_h))
         tmp_img.save(self.target_path + 'FINAL.png')
         

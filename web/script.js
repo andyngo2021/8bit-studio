@@ -1,3 +1,5 @@
+let val;
+
 window.onload = function()
 {
     console.log("hello world!");
@@ -21,9 +23,26 @@ function go()
     eel.getFile()(filename_resp);
     
 }
-
+let f = "";
 function filename_resp(filename)
 {
     console.log(filename);
     document.getElementById("main-display").src = filename;
+    f = filename;
+}
+
+function PIXELATE()
+{
+    val = document.getElementById("pixelator-slider").value;
+    sendValToPy(val);
+    // console.log("hi!");
+}
+
+eel.expose(sendValToPy);
+function sendValToPy()
+{
+    console.log("hi");
+    eel.acceptValFromJS(val);
+    // document.getElementById("main-display").src = f;
+    // return 5;
 }
