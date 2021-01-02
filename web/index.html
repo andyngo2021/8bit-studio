@@ -1,6 +1,7 @@
 <html>
     <head>
-
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <title>8-Bit Studio</title>
         <link rel="icon" type="assets/png" href="assets/logo.png"/>
@@ -9,17 +10,57 @@
 
     </head>
     <body>
+        <!-- Top header -->
         <div><img draggable="false" class="center" src="assets/header.png"></div>
-        <!-- <input type="file" id="thefile"> -->
-        <button onclick="go();">Select File to Pixelate</button>
-        <img id="main-display" src="">
         <br>
-        <div>Cows
-        <input id="pixelator-slider" style="width:400px;" type="range" min="1" max="100" value="1" oninput="PIXELATE();"></div>
-        <p id="test"></p>
-        <button onclick="sendValToPy();">HI THERE</button>
-        <script>
-    
-        </script>
+    <div class="flex-container">
+        <!-- Left Side Customization Window -->
+        <div class="flex-child left-customization-bar" style="margin-left:40px;">
+        <!-- <div class="grid-child purple"> -->
+            <!-- <br> -->
+            <p>Resize Image</p>
+            <div id="resize-controls">
+                
+                    <label>Width: </label>
+                    <input type="text" id="img-w" name="img-w">
+                    <br>
+                    <label>Height: </label>
+                    <input type="text" id="img-h" name="img-h">
+                    <br>
+                    
+            </div>
+            <form>
+            <label style="margin-bottom:0px;">Scale: </label>
+                <input class="scale-cb" type="checkbox">
+            </form>
+            
+            <!-- <br> -->
+
+            <button class="transparency-btn">Make Image Transparent</button>
+            <br>
+            <div><p1><span id="pixelization"></span>Pixelize Image</p1>
+            <br>
+            <input class="slider" id="pixelator-slider" style="width:90%;" type="range" min="1" max="100" value="1" oninput="PIXELATE();"></div>
+            
+
+        </div>
+        
+        <!-- Right Side Image Window -->
+        <div class="flex-child right-image-window">
+            <!-- <br> -->
+            
+            <p>Image Preview</p>
+            <div class="img-box">
+                <img src="assets/logo.png" id="main-display">
+            </div>
+
+            <div class="btn-group">
+                <button class="select-file-btn" onclick="go();">Open</button>
+                <button class="save-file-btn" onclick="">Save</button>
+            </div>
+        </div>
+
+    </div>
+
     </body>
 </html>

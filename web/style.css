@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 img {
     width: 50%;
     height: auto;
@@ -24,4 +25,147 @@ body{
     height: 100vh;
     padding:0;
     margin:0;
+    font-family: 'Staatliches', cursive;
+    font-size: 48px;
+    color:white;
 }
+
+.select-file-btn {
+    width: auto;
+}
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+} */
+
+/* .grid-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.grid-container .grid-child {
+    flex: 0 0 calc(25% - 1em);
+    min-height: 120px;
+    margin: 0.25em 0.5em;
+} */
+.flex-container {
+    display: flex;
+    width: 96%;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.flex-child {
+    background-color:black;
+    flex: 1;
+    border: 9px solid #faec55;
+    /* idk man */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}  
+
+.right-image-window {
+    /* background-color: black; */
+    background-image: url("assets/space.gif");
+}
+
+.left-customization-bar {
+    /* background-color:yellow; */
+    background-image: url("assets/space.gif");
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+
+.btn-group button {
+    border: 5px solid white; 
+    font-family: 'Staatliches', cursive;
+    font-size: 30;
+    color: white; /* White text */
+    padding: 10px 25px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 40%; /* Set a width if needed */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.transparency-btn {
+    border: 5px solid white;
+    font-family: 'Staatliches', cursive;
+    font-size: 30;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color:#b00055;
+    width: 80%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.transparency-btn:hover {
+    background-color:#e80572;
+}
+
+.select-file-btn {
+    margin:3%;
+    background-color: #007ab8;
+}
+.select-file-btn:hover {
+    background-color:#0e9de6;
+}
+
+.save-file-btn {
+    margin:3%;
+    background-color:#00c72e;
+}
+.save-file-btn:hover {
+    background-color:#09ed3e;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+}
+
+input {
+    height: 45px;
+    width: 40%;
+}
+
+label {
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    margin-right:10px;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-size:40;
+
+}
+
+input[type="text"], textarea 
+{
+    font-size:40;
+    /* background-color: #4a4a4a; */
+    background-color:#93a4d9;
+    color:white;
+    font-family: 'Staatliches', cursive;
+    border-radius: 15px 50px;
+    text-align:center;
+}
+
+.scale-cb {
+    margin-top: 0px;
+}
+
+input[type=checkbox] {
+    transform: scale(0.9);
+}
+

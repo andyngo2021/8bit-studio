@@ -12,7 +12,7 @@ def closeApp():
 
 filename = ""
 
-@eel.expose
+@eel.expose 
 def getFile():
     root = tk.Tk()
     root.withdraw()
@@ -51,7 +51,7 @@ def pixelateImage(location, value):
 
 # init the folder with all front end stuff
 eel.init('web')
-eel.start('index.html', size=(800, 600))
+eel.start('index.html', size=(1000, 600))
 
 
 # val = eel.sendValToPy()

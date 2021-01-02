@@ -13,7 +13,7 @@ class ResizableImage:
         self.filepath = filepath
         self.image = Image.open(self.filepath)
         self.original_w, self.original_h = self.image.size
-        print(self.original_w, self.original_h)
+        # print(self.original_w, self.original_h)
         tmp_path = filepath.split('/')
         tmp_path.pop()
         self.new_path = "/".join(tmp_path) + "/"
