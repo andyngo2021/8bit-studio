@@ -1,6 +1,8 @@
 from PIL import Image
 from random import randint
 import os
+import shutil
+
 # Remaps a value from one range to another
 def remap(val, old_min, old_max, new_min, new_max):
     pass
@@ -19,6 +21,8 @@ class ResizableImage:
         self.new_path = "/".join(tmp_path) + "/"
 
         self.target_path = os.getcwd().replace('\\', '/') + "/web/target-images/"
+        self.current_w = None
+        self.current_h = None
         # self.target_path = "/web/target-images/"
 
 
@@ -34,8 +38,13 @@ class ResizableImage:
         # then delete tmp?
 
     def resize(self, w, h):
+        # MAYBE TEST
+        self.current_w = w
+        self.current_h = h
+        # 
         tmp_img = self.image.resize((w, h))
         tmp_img.save(self.target_path + 'FINAL.png')
+        
 
     def pixelate_image(self, scale):
         new_w = int(self.original_w*scale)
@@ -47,10 +56,24 @@ class ResizableImage:
         tmp.save(tmp_path)
         # Pixelating the image
         tmp_img = Image.open(tmp_path)
-        # print(f'Resizing to these parameters: {self.original_w}x{self.original_h}')
-        tmp_img = tmp_img.resize((self.original_w, self.original_h))
+        # Resizing image to original size
+        if self.current_w is None or self.current_h is None:
+            tmp_img = tmp_img.resize((self.original_w, self.original_h))
+        else:
+            tmp_img = tmp_img.resize((self.current_w, self.current_h))
         tmp_img.save(self.target_path + 'FINAL.png')
         
         os.remove(tmp_path)
+    
+    def save_img(self, path):
+        # basically just need to save FINAL.png to where they passed it
+        final_path = self.target_path + 'FINAL.png'
+        # final_path = final_path.replace('/', '\\')
+        # path = path.replace('/', '\\')
+        # print('*'*25)
+        # print(f'Moving from {final_path} to {path}')
+        # print('*'*25)
+        shutil.move(final_path, path)
+        
 
     

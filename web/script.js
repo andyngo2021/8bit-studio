@@ -112,3 +112,8 @@ function isNumeric(value)
     // regex!??! POG!?!?
     return /^-?\d+$/.test(value);
 }
+
+function saveimg()
+{
+    eel.saveFile();
+}

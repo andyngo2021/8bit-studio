@@ -56,7 +56,15 @@ def getJSDim(w, h):
     h = int(h)
     tmp.resize(w, h)
 
+@eel.expose
+def saveFile():
+    root = tk.Tk()
+    root.withdraw()
+    root.wm_attributes('-topmost', 1)
+    file_type = [('PNG', '.png'), ('All Files', '*.*')]
+    f = filedialog.asksaveasfile(filetypes=file_type)
+    tmp.save_img(f.name)
+
 # init the folder with all front end stuff
 eel.init('web')
-eel.start('index.html', size=(900, 600))
-
+eel.start('index.html', size=(950, 650))
