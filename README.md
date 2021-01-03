@@ -3,7 +3,7 @@
 </p>
 
 
-<p allign="center"><h1>Easily Make Images 8-Bit Looking!<h1></p>
+<p align="center"><h1>Easily Make Images 8-Bit Looking!<h1></p>
 <p align="center">
 <img src="screenshots/screenshot_1.png">
 </p>
