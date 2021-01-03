@@ -33,7 +33,8 @@ Just use the slider located at the side and drag it to pixelate your image! Easy
 Save your image by clicking on the green save button!
 
 <br>
-
+<p align="center"><img src="screenshots/demo.gif"></p>
+<br>
 <p align="center">
 <img src="screenshots/screenshot_2.png">
 </p>
