@@ -3,14 +3,14 @@
 </p>
 
 
-# Pixilate Your Life!
+# Easily Make Images 8-Bit Looking!
 <p align="center">
 <img src="screenshots/screenshot_1.png">
 </p>
 
 <br>
 
-<p align="center">**Easily turn boring images into cool pixelated versions of themselves!**</p>
+**<p align="center">Easily turn boring, dull images into cool pixelated versions of themselves!</p>**
 
 # How to Use
 
