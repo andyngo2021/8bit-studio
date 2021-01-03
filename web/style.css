@@ -30,6 +30,10 @@ body{
     color:white;
 }
 
+.slider {
+    outline:none;
+}
+
 .select-file-btn {
     width: auto;
 }
@@ -119,8 +123,9 @@ button {
 
 .img-box img {
     max-height: 300px;
+    
     height: 70%;
-    width: auto;
+    width: 90%;
 }
 
 
