@@ -22,22 +22,22 @@
             <div id="resize-controls">
                 
                     <label>Width: </label>
-                    <input type="text" id="img-w" name="img-w">
+                    <input oninput="onchangeW();" type="text" id="img-w" name="img-w">
                     <br>
                     <label>Height: </label>
-                    <input type="text" id="img-h" name="img-h">
+                    <input oninput="onchangeH();" type="text" id="img-h" name="img-h">
                     <br>
                     
             </div>
             <form>
-            <label style="margin-bottom:0px;">Scale: </label>
-                <input class="scale-cb" type="checkbox">
+            <label style="margin-bottom:0px;">Maintain Scale: </label>
+                <input class="scale-cb" type="checkbox" id="cb" onchange="onchangeCB();">
             </form>
             
             <!-- <br> -->
-            <button class="apply-changes-btn">Apply Changes</button>
-            <br>
-            <button class="transparency-btn">Make Image Transparent</button>
+            <button class="apply-changes-btn" onclick="applyChanges();">Apply Changes</button>
+            <!-- <br> -->
+            <!-- <button class="transparency-btn">Remove Background</button> -->
             <br>
             <div><p1><span id="pixelization"></span>Pixelize Image</p1>
             <br>
@@ -52,7 +52,7 @@
             
             <p>Image Preview</p>
             <div class="img-box">
-                <img draggable=false src="assets/logo.png" id="main-display">
+                <img draggable=false src="assets/blank.png" id="main-display">
             </div>
 
             <div class="btn-group">

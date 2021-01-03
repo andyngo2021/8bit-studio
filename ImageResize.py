@@ -22,16 +22,20 @@ class ResizableImage:
         # self.target_path = "/web/target-images/"
 
 
-    def resize_image(self, scale):
-        new_w = int(self.original_w*scale)
-        new_h = int(self.original_h*scale)
-        tmp = self.image.resize((new_w, new_h))
-        tmp_filename = f'tmp{int(randint(0,10000))}.png'
-        tmp_path = self.new_path + tmp_filename
-        # print(f'Saving file as {tmp_filename}')
-        tmp.save(tmp_path)
+    # def resize_image(self, scale):
+    #     new_w = int(self.original_w*scale)
+    #     new_h = int(self.original_h*scale)
+    #     tmp = self.image.resize((new_w, new_h))
+    #     tmp_filename = f'tmp{int(randint(0,10000))}.png'
+    #     tmp_path = self.new_path + tmp_filename
+    #     # print(f'Saving file as {tmp_filename}')
+    #     tmp.save(tmp_path)
 
         # then delete tmp?
+
+    def resize(self, w, h):
+        tmp_img = self.image.resize((w, h))
+        tmp_img.save(self.target_path + 'FINAL.png')
 
     def pixelate_image(self, scale):
         new_w = int(self.original_w*scale)

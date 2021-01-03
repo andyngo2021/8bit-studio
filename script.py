@@ -39,19 +39,24 @@ def acceptValFromJS(val):
     pixelateImage(filename, pixelation_scale)
     # inverse poggers
 
+tmp = ""
 def pixelateImage(location, value):
+    global tmp
     tmp = ResizableImage(location)
     tmp.pixelate_image(value)
 
+@eel.expose
+def getDimensions():
+    w, h = tmp.image.size
+    return w, h
 
-    
-
-
+@eel.expose
+def getJSDim(w, h):
+    w = int(w)
+    h = int(h)
+    tmp.resize(w, h)
 
 # init the folder with all front end stuff
 eel.init('web')
-eel.start('index.html', size=(1000, 700))
+eel.start('index.html', size=(900, 600))
 
-
-# val = eel.sendValToPy()
-# print(val)
