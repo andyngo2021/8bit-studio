@@ -30,6 +30,7 @@ function pydim(dim)
 {
     document.getElementById("img-w").value = dim[0];
     document.getElementById("img-h").value = dim[1];
+    img_dim = []
     img_dim.push(dim[0]); // w
     img_dim.push(dim[1]); // h
     applyChanges();

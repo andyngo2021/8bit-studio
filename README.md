@@ -14,7 +14,7 @@
 <br>
 
 # How to Use
-
+[Demo Video](https://youtu.be/JpKMD_iQf7A)
 ### Getting Started
 You could just clone the repository and then execute the script.py file in some IDE or using the terminal. 
 
