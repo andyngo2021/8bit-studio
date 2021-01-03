@@ -1,4 +1,5 @@
 let val;
+let f = "";
 
 window.onload = function()
 {
@@ -23,6 +24,7 @@ function go()
     eel.getFile()(filename_resp);
     eel.getDimensions()(pydim);
 }
+
 let img_dim = [];
 function pydim(dim)
 {
@@ -30,9 +32,10 @@ function pydim(dim)
     document.getElementById("img-h").value = dim[1];
     img_dim.push(dim[0]); // w
     img_dim.push(dim[1]); // h
+    applyChanges();
 }
 
-let f = "";
+
 function filename_resp(filename)
 {
     document.getElementById("main-display").src = filename;

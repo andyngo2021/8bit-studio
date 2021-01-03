@@ -23,7 +23,9 @@ class ResizableImage:
         self.current_w = w
         self.current_h = h
         # 
+        self.image = Image.open(self.target_path + 'FINAL.png')
         tmp_img = self.image.resize((w, h))
+        # print(f"*Resizing to {w}x{h}")
         tmp_img.save(self.target_path + 'FINAL.png')
         
 
@@ -36,20 +38,29 @@ class ResizableImage:
         tmp.save(tmp_path)
 
         # Pixelating the image
+        self.image = Image.open(self.target_path + 'FINAL.png')
+        new_w, new_h = self.image.size
         tmp_img = Image.open(tmp_path)
         # Resizing image to original size
-        if self.current_w is None or self.current_h is None:
-            tmp_img = tmp_img.resize((self.original_w, self.original_h))
-        else:
-            tmp_img = tmp_img.resize((self.current_w, self.current_h))
+        # new_w, new_h = None, None
+        # if self.current_w is None or self.current_h is None:
+        #     new_w, new_h = self.original_w, self.original_h
+        # else:
+        #     new_w, new_h = self.current_w, self.current_h
+        # print(f"Resizing to {new_w}x{new_h}")
+        tmp_img = tmp_img.resize((new_w, new_h)) 
         tmp_img.save(self.target_path + 'FINAL.png')
         
         os.remove(tmp_path)
     
     def save_img(self, path):
         # basically just need to save FINAL.png to where user wants to save
+        
         final_path = self.target_path + 'FINAL.png'
+        tmp = Image.open(final_path)
+        copy = tmp.copy()
         shutil.move(final_path, path)
+        copy.save(final_path)
         
 
     
