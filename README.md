@@ -54,10 +54,3 @@ AFTER I made the game, I realized how you could just shrink images and resize th
 8-Bit Studio was made with HTML, CSS, JavaScript as the frontend and Python for the backend. For the image processing, I used Python Imaging Library (PIL). To allow for the backend to communicate with the frontend, I used [eel](https://github.com/samuelhwilliams/Eel), a Python library used to make Electron-like GUI applications. 
 
 Originally, I intended to make my GUI with Electron, but after stumbling across eel, I just knew I had to use it because the name was so funny.
-
-So why'd I create this desktop application for a hackathon centered around the New Year? 
-
-To me, the new year symbolizes an opportunity for growth. Prior to the hackathon, I had an irrational fear of HTML/CSS because it looked so tedious-- and it was LOL. I figured that since it was a new year I might as well force myself to learn how to use HTML/CSS because I was pretty sure I couldn't run away from it forever.
-
-Overall, the experience was meh. I think I lost a couple of brain cells along the way trying to learn how to position HTML elements with CSS and probably spent more time on StackOverflow than on VSCode. In the end, I'm still glad I tried something new for this hackathon. I definitely learned a ton!
-
